@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    width: 100%;
+    background: rgba(6,84, 113);
+}
+
+.menu > ul > li{
+    display: inline-block;
+    width: 16%;
+    padding: 10px 0px;
+    color: rgba( 255, 194, 68);
+}
+
+.header > .foto img {
+    width: 250px;
+    display: inline-block;
+}
+
+.over_ons {
+    width: 70%;
+    line-height: 20px;
+    text-align: justify;
+    margin: 100px 15%;
+}
+
+.over_ons h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.foto, .menu{
+    display:inline-block;
+}
+
+.menu{
+    width: 60%;
+    text-align:center;
+    font-size:20px;
+    vertical-align:top;
+    margin-top:100px;
+}
+
+.header_img img {
+    width: 100%;
+}
+
+.nieuws{
+    background: #0A91AB;
+    text-align: center;
+    padding: 5% 0px
+}
+
+.nieuws h1{
+    color: rgba( 255, 194, 68);
+}
+
+.artikel{
+    width: 70%;
+    margin-left:15%;
+    background:white;
+    text-align:left;
+    margin-bottom: 50px;
+}
+
+.artikel_img, .artikel_text{
+    display:inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.artikel_img{
+    padding-right: 20px;
+    height:200px;
+}
+
+.artikel_text{
+    width:70%;
+}
