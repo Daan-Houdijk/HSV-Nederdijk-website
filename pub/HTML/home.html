@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>HSV Nederdijk</title>
-        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="../CSS/stylesheet.css" type="text/css">
         <script src="loterij.js" defer></script>
         <script src="../jquery-3.3.1.min.js"></script>
     </head>
@@ -11,7 +11,7 @@
         <nav>
             <div class="header">
                 <div class="foto">
-                    <img src="pub/afbeeldingen/HSV_logo_transparent.png"/>
+                    <img src="../afbeeldingen/HSV_logo_transparent.png"/>
                 </div>
                 <div class="menu">
                     <ul>
@@ -25,7 +25,7 @@
             </div>
         </nav>
         <div class="header_img">
-            <img src="pub/afbeeldingen/honkbal_header.jpg">
+            <img src="../afbeeldingen/honkbal_header.jpg">
         </div>
         <div class="over_ons">
             <h1>Over ons</h1>
@@ -45,7 +45,7 @@
             <!-- Artikel 1 -->
             <div class="artikel">
                 <div class="artikel_img">
-                    <img src="pub/afbeeldingen/kw1c_logo.jpg">
+                    <img src="../afbeeldingen/kw1c_logo.jpg">
                 </div>
                 <div class="artikel_text">
                     <h3>HSV Nederdijk heeft een nieuwe site!</h3>
@@ -56,7 +56,7 @@
             <!-- Artikel 2 -->
             <div class="artikel">
                 <div class="artikel_img">
-                    <img src="pub/afbeeldingen/placehoder_img.png">
+                    <img src="../afbeeldingen/placehoder_img.png">
                 </div>
                 <div class="artikel_text">
                     <h3>Lorem Ipsum</h3>
@@ -67,7 +67,7 @@
             <!-- Artikel 3 -->
             <div class="artikel">
                 <div class="artikel_img">
-                    <img src="pub/afbeeldingen/placehoder_img.png">
+                    <img src="../afbeeldingen/placehoder_img.png">
                 </div>
                 <div class="artikel_text">
                     <h3>Lorem Ipsum</h3>
@@ -81,9 +81,27 @@
 
         </div>
 
-        <div class="contact">
-
-
+        <div class="contact_wrapper">
+            <h1>
+                Contactformulier
+            </h1>
+            <p>
+                Gebruik dit formulier om contact met ons op te nemen
+            </p>
+            <form>
+                <select name="aanhef">
+                    <option value="dhr.">Dhr.</option>
+                    <option value="mevr.">Mevr.</option>
+                </select>
+                <input type="text" placeholder="Naam" required>
+                <input type="email" placeholder="E-mailadres" required>
+                Telefoonnummer<input type="tel" placeholder="Telefoonnummer" required><br>
+                Vraag/opmerking<input type="text" placeholder="Bericht" required><br>
+                Aanmelden voor nieuwsbrief?<input type="checkbox">
+                <button type="submit">
+                    Verzend
+                </button>
+            </form>
         </div>
     </body>
 </html>

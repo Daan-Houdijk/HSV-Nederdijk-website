@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    font-family: Arial;
 }
 
 nav{
@@ -79,4 +80,20 @@ nav{
 
 .artikel_text{
     width:70%;
+}
+.contact_wrapper
+{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 70vw;
+    min-width: 300px;
+    min-height: 300px;
+    border: 1px solid black;
+    margin: 0px;
+}
+
+.contact_wrapper form
+{
+    margin: 0px;
 }
