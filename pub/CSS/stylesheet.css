@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Arial;
+    background-color: #065471;
 }
 
 nav{
@@ -86,14 +87,68 @@ nav{
     text-align: center;
     display: block;
     margin: auto;
-    width: 70vw;
-    min-width: 300px;
+    width: 800px;
     min-height: 300px;
-    border: 1px solid black;
-    margin: 0px;
+    color: #ffc244;
+    margin-bottom: 20px;
 }
 
-.contact_wrapper form
+.contact_form
 {
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-align: baseline;
+    justify-content: space-evenly;
 }
+
+.contact_form input, .contact_form textarea, .contact_form select
+{
+    min-height: 30px;
+    background-color: #e6edf0;
+    margin-top: 15px;
+}
+
+
+.contact_form #input_onderwerp
+{
+    width: 100%;
+}
+
+.contact_form #input_bericht
+{
+    width: 100%;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.contact_form button
+{
+    background-color: #065471;
+    color: #ffc244;
+    width: 200px;
+    font-size: 1.3em;
+}
+
+.contact_form button:hover
+{
+    background-color: #ffc244;
+    color: #065471;
+    cursor: pointer;
+}
+
+.contact_form input[type=checkbox]
+{
+    width: 20px;
+}
+
+.contact_form input[type=checkbox]
+{
+    cursor: pointer;
+}
+
+/*
+achtergrond input   #e6edf0
+achtergrond knop    #065471
+tekst knop          #ffc244
+ */

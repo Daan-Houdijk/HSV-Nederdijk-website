@@ -88,18 +88,19 @@
             <p>
                 Gebruik dit formulier om contact met ons op te nemen
             </p>
-            <form>
+            <form class="contact_form">
                 <select name="aanhef">
                     <option value="dhr.">Dhr.</option>
                     <option value="mevr.">Mevr.</option>
                 </select>
                 <input type="text" placeholder="Naam" required>
                 <input type="email" placeholder="E-mailadres" required>
-                Telefoonnummer<input type="tel" placeholder="Telefoonnummer" required><br>
-                Vraag/opmerking<input type="text" placeholder="Bericht" required><br>
+                <input type="tel" placeholder="Telefoonnummer" required>
+                <input type="text" id="input_onderwerp" placeholder="Onderwerp" required>
+                <textarea type="text" id="input_bericht" placeholder="Bericht" required></textarea>g<br>
                 Aanmelden voor nieuwsbrief?<input type="checkbox">
                 <button type="submit">
-                    Verzend
+                    Verzenden
                 </button>
             </form>
         </div>
