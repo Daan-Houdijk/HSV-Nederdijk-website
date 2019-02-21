@@ -1,0 +1,37 @@
+*
+{
+    text-align: center;
+}
+
+#inputs
+{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    top: 350px;
+    background-color: lightgrey;
+    border: 1px solid #999999;
+    border-radius: 5px;
+}
+
+#topText, #message
+{
+    opacity: 0.5;
+}
+
+#WinnerList
+{
+    position: absolute;
+    left: 50%;
+    margin-left: 350px;
+    top: 355Px;
+    background-color: lightgrey;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    width: 450px;
+    height: 250px;
+    overflow-y: scroll;
+}
+
