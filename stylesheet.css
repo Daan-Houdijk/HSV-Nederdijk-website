@@ -80,3 +80,25 @@ nav{
 .artikel_text{
     width:70%;
 }
+/*Slider */
+/*.leden_container{
+    margin: auto;
+    position: relative;
+    left: 50%;
+}*/
+.w3-display-container.mySlides {
+    position: relative;
+    margin: auto;
+    left: 41%;
+}
+.button_left {
+    position: relative;
+    top: -190px;
+    left: 559px;
+    z-index: 999;
+}
+.button_right {
+    position: relative;
+    top: -190px;
+    left: 938px;
+}

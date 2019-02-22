@@ -36,9 +36,78 @@
             </p>
         </div>
 
-        <div class="leden">
 
-        </div>
+        <!--Leden-->
+
+
+            <div class="leden_container">
+
+            <div class="w3-content w3-display-container">
+
+                <div class="w3-display-container mySlides">
+                    <img src="pub/afbeeldingen/leden/lid1.jpg" style="width:300px">
+                    <div class="name">
+                        Rick de vries
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="pub/afbeeldingen/leden/lid2.jpg"" style="width:300px">
+                    <div class="name">
+                        Mattijs Mols
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="pub/afbeeldingen/leden/lid3.jpg"" style="width:300px">
+                    <div class="name">
+                        Isa Vanmeer
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="pub/afbeeldingen/leden/lid4.jpg"" style="width:300px">
+                    <div class="name">
+                        Daan Houtdijk
+                    </div>
+                </div>
+
+                <div class="w3-display-container mySlides">
+                    <img src="pub/afbeeldingen/user_icon.png" style="width:300px">
+                    <div class="name">
+                        Komt nog!
+                    </div>
+                </div>
+
+                <button class="button_left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="button_right" onclick="plusDivs(1)">&#10095;</button>
+
+            </div>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex-1].style.display = "block";
+            }
+        </script>
+
+
+
+
+
 
         <div class="nieuws">
             <h1>Nieuws</h1>
