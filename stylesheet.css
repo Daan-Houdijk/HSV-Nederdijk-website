@@ -89,16 +89,16 @@ nav{
 .w3-display-container.mySlides {
     position: relative;
     margin: auto;
-    left: 41%;
+    left: 20%;
 }
 .button_left {
-    position: relative;
-    top: -190px;
-    left: 559px;
+    position: absolute;
     z-index: 999;
+    left: 206px;
+    top: 1341px;
 }
 .button_right {
-    position: relative;
-    top: -190px;
-    left: 938px;
+    position: absolute;
+    top: 1341px;
+    right: 146px;
 }
