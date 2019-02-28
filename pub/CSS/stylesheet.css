@@ -1,8 +1,10 @@
+html{
+    font-family: Arial;
+}
+
 body{
     margin: 0px;
     padding: 0px;
-    font-family: Arial;
-    background-color: #065471;
 }
 
 nav{
@@ -14,7 +16,21 @@ nav{
     display: inline-block;
     width: 16%;
     padding: 10px 0px;
+    border-left: 1px solid white;
+}
+
+.menu > ul > li:first-of-type{
+    border-left: 0px;
+}
+
+.menu a, .artikel a{
     color: rgba( 255, 194, 68);
+    text-decoration: none;
+}
+
+
+.menu a:hover{
+    opacity: 0.8;
 }
 
 .header > .foto img {
@@ -22,16 +38,18 @@ nav{
     display: inline-block;
 }
 
-.over_ons {
+#over_ons {
     width: 70%;
     line-height: 20px;
     text-align: justify;
     margin: 100px 15%;
+    padding: 20px 0px;
 }
 
-.over_ons h1{
+#over_ons h1, #leden h1, #loterij h1{
     text-align: center;
     font-size: 40px;
+    color: rgba( 255, 194, 68);
 }
 
 .foto, .menu{
@@ -50,13 +68,37 @@ nav{
     width: 100%;
 }
 
-.nieuws{
+#leden{
+    background: #eee;
+}
+
+#leden h1{
+    margin-top: 30px;
+}
+.w3-display-container.mySlides {
+    position: relative;
+    margin: auto;
+    left: 20%;
+}
+.button_left {
+    position: relative;
+    z-index: 999;
+    left: 250px;
+    top: -150px;
+}
+.button_right {
+    position: relative;
+    right: -350px;
+    top: -150px;
+}
+
+#nieuws{
     background: #0A91AB;
     text-align: center;
     padding: 5% 0px
 }
 
-.nieuws h1{
+#nieuws h1{
     color: rgba( 255, 194, 68);
 }
 
@@ -82,6 +124,82 @@ nav{
 .artikel_text{
     width:70%;
 }
+
+.nieuws_pagina {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.nieuws_pagina h1 {
+    text-align: center;
+}
+
+a.terug_knop {
+    background: rgba(6,84, 113);
+    color: rgba( 255, 194, 68);
+    padding: 10px 0px;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#loterij{
+    width: 70%;
+    padding: 20px 15%;
+    margin-top:0px;
+    margin-bottom: 50px;
+
+}
+
+#loterij h1{
+    margin-top: 0px;
+}
+#inputs
+{
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#topText, #message
+{
+    color: black;
+}
+
+#loterij input{
+    height: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left:5px;
+}
+
+#loterij input[type=button]{
+    background: rgba(6,84, 113);
+    color: rgba( 255, 194, 68);
+    border: none;
+    padding: 10px 0px;
+    height: unset;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+#WinnerList
+{
+    width: 30%;
+    height: 250px;
+    overflow-y: scroll;
+    display: inline-block;
+    margin-left: 40px;
+    float: right;
+}
+
 .contact_wrapper
 {
     text-align: center;
@@ -107,6 +225,7 @@ nav{
     min-height: 30px;
     background-color: #e6edf0;
     margin-top: 15px;
+    padding-left: 10px;
 }
 
 
@@ -147,8 +266,16 @@ nav{
     cursor: pointer;
 }
 
-/*
-achtergrond input   #e6edf0
-achtergrond knop    #065471
-tekst knop          #ffc244
- */
+#contact{
+    padding-bottom: 70px;
+    background: rgba(18, 120, 140, 0.9);
+
+}
+
+div#footer {
+    text-align: center;
+    background: #eee;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}

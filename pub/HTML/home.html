@@ -4,8 +4,8 @@
         <meta charset="utf-8" />
         <title>HSV Nederdijk</title>
         <link rel="stylesheet" href="../CSS/stylesheet.css" type="text/css">
+        <script src="jquery-3.3.1.min.js"></script>
         <script src="loterij.js" defer></script>
-        <script src="../jquery-3.3.1.min.js"></script>
     </head>
     <body>
         <nav>
@@ -15,19 +15,19 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>Over ons</li>
-                        <li>Nieuws</li>
-                        <li>Leden</li>
-                        <li>Loterij</li>
-                        <li>Contact</li>
+                        <li><a href="#over_ons">Over ons</a></li>
+                        <li><a href="#nieuws">Nieuws</a></li>
+                        <li><a href="#leden">Leden</a></li>
+                        <li><a href="#loterij">Loterij</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="header_img">
-            <img src="../afbeeldingen/honkbal_header.jpg">
+            <img src="../afbeeldingen/header-img.PNG">
         </div>
-        <div class="over_ons">
+        <div id="over_ons" name="over_ons">
             <h1>Over ons</h1>
             <p>
                 De vereniging is opgericht in 1982. In deze periode heeft de vereniging zich een eigen plek in de Nederdijk sportwereld veroverd. De vereniging heeft zijn ups en downs gehad. Eén kenmerk is altijd gebleven: de goede en gezellige sfeer. Gestart achter de watermolen die eerst gedeeld moest worden met andere sportverenigingen en in tijdelijke kleedkamers en kantines, gevolgd door een periode van tijdelijke inwoning op sportcomplex ‘De Braken’ bij de Koninklijke UD beschikt de vereniging eindelijk over een eigen, en ik moet zeggen, een prachtige, accommodatie.</p>
@@ -36,11 +36,61 @@
             </p>
         </div>
 
-        <div class="leden">
+        <div id="leden">
+            <h1>Leden</h1>
+            <!--Leden-->
+
+
+            <div class="leden_container">
+
+                <div class="w3-content w3-display-container">
+                    <button class="button_left" onclick="plusDivs(-1)">&#10094;</button>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="../afbeeldingen/leden/lid1.jpg" style="width:300px">
+                        <div class="name">
+                            Rick de vries
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="../afbeeldingen/leden/lid2.jpg" style="width:300px">
+                        <div class="name">
+                            Mattijs Mols
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="../afbeeldingen/leden/lid3.jpg" style="width:300px">
+                        <div class="name">
+                            Isa Vanmeer
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="../afbeeldingen/user_icon.png"  style="width:300px">
+                        <div class="name">
+                            Daan Houtdijk
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container mySlides">
+                        <img src="../afbeeldingen/user_icon.png" style="width:300px">
+                        <div class="name">
+                            Komt nog!
+                        </div>
+                    </div>
+
+
+                    <button class="button_right" onclick="plusDivs(1)">&#10095;</button>
+
+                </div>
+
 
         </div>
+        </div>
 
-        <div class="nieuws">
+        <div id="nieuws">
             <h1>Nieuws</h1>
             <!-- Artikel 1 -->
             <div class="artikel">
@@ -50,7 +100,7 @@
                 <div class="artikel_text">
                     <h3>HSV Nederdijk heeft een nieuwe site!</h3>
                     <p>Sinds kort hebben we een gloed nieuwe site. Met zeer duidelijk overleg hebben we met specialisten een site ontworpen. Het ontwerp is nu al                               genomineerd voor meerdere prijzen volgens de KNHB voor ICT. Dit is hoe dan ook geen showboating of wierd flex.</p>
-                    <a href="#" >Lees meer...</a>
+                    <a href="Nieuws%20artikelen/artikel1.html" >Lees meer...</a>
                 </div>
             </div>
             <!-- Artikel 2 -->
@@ -77,32 +127,70 @@
             </div>
         </div>
 
-        <div class="loterij">
+        <div id="loterij">
+            <h1>Loterij</h1>
+            <p>Doe mee met onze loterij en win fantastische prijzen. Voer je naam en een lotnummer van 5 cijfers in en kijk of je iets hebt gewonnen.</p>
+            <ul>
+                <li>Hoofdprijs: Iets heel groot</li>
+                <li>Prijs 2: Zilvere medaille</li>
+                <li>Prijs 3: Cadeau bon voor de kantine</li>
+            </ul>
+
+            <div id="inputs">
+                <h2>
+                    Voer uw naam en lotnummer in
+                </h2>
+                <div>
+                    Naam:
+                    <input id="Name" type="text">
+                </div>
+                <div>
+                    Lotnummer
+
+                    <input id="invoerNum" type="number" placeholder="Voer een 5-cijfer getal in" required>
+                </div>
+                <div id="message">
+
+                </div>
+                <input type="button" id="CheckNumber" onclick="zoeken()" value="Check je lotnummer">
+            </div>
+            <div id="WinnerList">
+                <h2>Winnaarslijst</h2>
+            </div>
+            <div>
+
+            </div>
 
         </div>
 
-        <div class="contact_wrapper">
-            <h1>
-                Contactformulier
-            </h1>
-            <p>
-                Gebruik dit formulier om contact met ons op te nemen
-            </p>
-            <form class="contact_form">
-                <select name="aanhef">
-                    <option value="dhr.">Dhr.</option>
-                    <option value="mevr.">Mevr.</option>
-                </select>
-                <input type="text" placeholder="Naam" required>
-                <input type="email" placeholder="E-mailadres" required>
-                <input type="tel" placeholder="Telefoonnummer" required>
-                <input type="text" id="input_onderwerp" placeholder="Onderwerp" required>
-                <textarea type="text" id="input_bericht" placeholder="Bericht" required></textarea>g<br>
-                Aanmelden voor nieuwsbrief?<input type="checkbox">
-                <button type="submit">
-                    Verzenden
-                </button>
-            </form>
+        <div id="contact">
+            <div class="contact_wrapper">
+                <h1>
+                    Contactformulier
+                </h1>
+                <p>
+                    Gebruik dit formulier om contact met ons op te nemen
+                </p>
+                <form class="contact_form">
+                    <select name="aanhef">
+                        <option value="dhr.">Dhr.</option>
+                        <option value="mevr.">Mevr.</option>
+                    </select>
+                    <input type="text" placeholder="Naam" required>
+                    <input type="email" placeholder="E-mailadres" required>
+                    <input type="tel" placeholder="Telefoonnummer" required>
+                    <input type="text" id="input_onderwerp" placeholder="Onderwerp" required>
+                    <textarea type="text" id="input_bericht" placeholder="Bericht" required></textarea><br>
+                    Aanmelden voor nieuwsbrief?<input type="checkbox">
+                    <button type="submit">
+                        Verzenden
+                    </button>
+                </form>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p>Copyright 2019-2020</p>
         </div>
     </body>
 </html>
