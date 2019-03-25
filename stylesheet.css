@@ -7,16 +7,27 @@ body{
     padding: 0px;
 }
 
+/* Menu */
 nav{
     width: 100%;
     background: rgba(6,84, 113);
+    position: fixed;
+    z-index: 9999;
+}
+
+.menu > ul{
+    padding: 0px;
 }
 
 .menu > ul > li{
     display: inline-block;
-    width: 16%;
-    padding: 10px 0px;
     border-left: 1px solid white;
+}
+
+.menu a {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 0px;
 }
 
 .menu > ul > li:first-of-type{
@@ -28,46 +39,73 @@ nav{
     text-decoration: none;
 }
 
-
 .menu a:hover{
     opacity: 0.8;
 }
 
-.header > .foto img {
-    width: 250px;
-    display: inline-block;
+.menu {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: top;
+    margin-top: 15px;
 }
 
-#over_ons {
-    width: 70%;
-    line-height: 20px;
-    text-align: justify;
-    margin: 100px 15%;
-    padding: 20px 0px;
+.header_img img {
+    width: 100%;
+    margin-top: 50px;
 }
+/* END Menu*/
 
-#over_ons h1, #leden h1, #loterij h1{
+/* All the sections */
+#over_ons h1,
+#leden h1,
+#nieuws h1,
+#loterij h1,
+.contact_wrapper h1{
     text-align: center;
     font-size: 40px;
     color: rgba( 255, 194, 68);
+}
+
+#over_ons,
+#leden,
+#nieuws,
+#loterij,
+#contact{
+    width: 100%;
+    line-height: 20px;
+    padding: 100px 15%;
+    box-sizing: border-box;
+}
+
+/* END All the sections */
+
+.header > .foto img {
+    width: 150px;
+    display: inline-block;
+}
+/* Over ons */
+#over_ons p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+#teamfoto{
+    width: 40%;
+    float:right;
+    display: inline-block;
+    padding-left: 30px;
 }
 
 .foto, .menu{
     display:inline-block;
 }
 
-.menu{
-    width: 60%;
-    text-align:center;
-    font-size:20px;
-    vertical-align:top;
-    margin-top:100px;
-}
+/* End Over Ons */
 
-.header_img img {
-    width: 100%;
-}
-
+/* Leden */
 #leden{
     background: #eee;
 }
@@ -75,27 +113,39 @@ nav{
 #leden h1{
     margin-top: 30px;
 }
+
 .w3-display-container.mySlides {
     position: relative;
     margin: auto;
-    left: 20%;
-}
-.button_left {
-    position: relative;
-    z-index: 999;
-    left: 250px;
-    top: -150px;
-}
-.button_right {
-    position: relative;
-    right: -350px;
-    top: -150px;
+    text-align: center;
+    line-height: 20px;
+    width: 30%;
 }
 
+.mySlides img {
+    width: 90% !important;
+}
+
+.leden_container {
+    padding-bottom: 20px;
+}
+
+.controls{
+    text-align: center;
+    margin-top:20px;
+}
+
+.w3-content.w3-display-container {
+    text-align: center;
+}
+
+/* End Leden */
+
+/* Nieuws */
 #nieuws{
     background: #0A91AB;
     text-align: center;
-    padding: 5% 0px
+    padding: 5% 0px;
 }
 
 #nieuws h1{
@@ -134,7 +184,7 @@ nav{
     text-align: center;
 }
 
-a.terug_knop {
+a.terug_knop{
     background: rgba(6,84, 113);
     color: rgba( 255, 194, 68);
     padding: 10px 0px;
@@ -144,21 +194,18 @@ a.terug_knop {
     text-decoration: none;
 }
 
+/* End Nieuws */
+
 ul{
     list-style-type: none;
 }
 
-#loterij{
-    width: 70%;
-    padding: 20px 15%;
-    margin-top:0px;
-    margin-bottom: 50px;
-
+button, input[type=button]
+{
+    border: 0px;
+    padding: 5px 0px;
 }
 
-#loterij h1{
-    margin-top: 0px;
-}
 #inputs
 {
     width: 50%;
@@ -172,11 +219,12 @@ ul{
     color: black;
 }
 
-#loterij input{
-    height: 25px;
+#loterij input {
+    height: 30px;
     width: 100%;
     margin-bottom: 10px;
-    padding-left:5px;
+    padding-left: 5px;
+    box-sizing: border-box;
 }
 
 #loterij input[type=button]{
@@ -190,14 +238,17 @@ ul{
     margin-top: 20px;
 }
 
-#WinnerList
+#Winners
 {
     width: 30%;
-    height: 250px;
-    overflow-y: scroll;
     display: inline-block;
     margin-left: 40px;
     float: right;
+}
+
+#WinnerList{
+    overflow-y: scroll;
+    max-height: 250px;
 }
 
 .contact_wrapper
@@ -205,27 +256,32 @@ ul{
     text-align: center;
     display: block;
     margin: auto;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     min-height: 300px;
     color: #ffc244;
     margin-bottom: 20px;
+    padding-top: 15px;
 }
 
 .contact_form
 {
     margin: 0px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     -ms-flex-align: baseline;
-    justify-content: space-evenly;
+    max-width: 70%;
 }
 
 .contact_form input, .contact_form textarea, .contact_form select
 {
     min-height: 30px;
     background-color: #e6edf0;
-    margin-top: 15px;
+    margin-top: 5px;
     padding-left: 10px;
+    width: 100%;
+    border: 0px;
 }
 
 
@@ -241,15 +297,22 @@ ul{
     margin-bottom: 20px;
 }
 
-.contact_form button
+.contact_form button, .leden_container button
 {
     background-color: #065471;
     color: #ffc244;
-    width: 200px;
+    width: 100%;
     font-size: 1.3em;
+    padding: 10px 0px;
+}
+.leden_container button{
+    width: 50px !important;
+}
+.leden_container .button_left{
+    margin-right: 20px;
 }
 
-.contact_form button:hover
+.contact_form button:hover,#loterij input[type=button]:hover, #leden button:hover
 {
     background-color: #ffc244;
     color: #065471;
@@ -259,18 +322,28 @@ ul{
 .contact_form input[type=checkbox]
 {
     width: 20px;
-}
-
-.contact_form input[type=checkbox]
-{
     cursor: pointer;
 }
 
 #contact{
     padding-bottom: 70px;
     background: rgba(18, 120, 140, 0.9);
-
 }
+
+.contact_form label
+{
+    text-align: left;
+    margin-left: 0px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+form > p {
+    margin: 9px 0px;
+    display: inline-block;
+}
+
+
 
 div#footer {
     text-align: center;
@@ -279,3 +352,172 @@ div#footer {
     width: 100%;
     bottom: 0px;
 }
+
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .artikel_text {
+        width: 50%;
+    }
+    .mySlides img {
+        width: 100% !important;
+    }
+
+    .w3-display-container.mySlides {
+        width: 30% !important;
+    }
+
+    .menu{
+        width: 78%;
+    }
+    .menu a {
+        width: 110px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Menu */
+    nav{
+        width: 100%;
+        background: rgba(6,84, 113);
+        position: static;
+        z-index: 9999;
+    }
+
+    .menu {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .header {
+        width: 100%;
+    }
+    .header > .foto img {
+        width: 30%;
+        display: inline-block;
+        margin-left: 35%;
+    }
+
+    .menu > ul > li {
+        width: 100% !important;
+        display: block;
+        border: none;
+    }
+
+    .header_img img{
+        margin-top: 0px;
+    }
+    #teamfoto{
+        width: 100%;
+    }
+
+    #over_ons,
+    #leden,
+    #nieuws,
+    #loterij,
+    #contact{
+        width: 100% !important;
+        padding: 100px 5%;
+    }
+
+
+    /* Nieuws */
+    .artikel_img{
+        height: auto;
+        width: 100%;
+    }
+
+    .artikel_img img{
+        width: 100%;
+    }
+
+    .artikel_text{
+        width: 90%;
+        padding: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .artikel{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .nieuws_pagina {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    a.terug_knop{
+        width: 100%;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    /* End Nieuws */
+
+    /* Loterij */
+    #inputs {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #Winners {
+        width: 100%;
+        float:none;
+        margin-left: 0px;
+    }
+
+    /* End Loterij */
+
+    /* Contact Form */
+    .contact_wrapper
+    {
+        width: 100%;
+    }
+
+    #loterij input[type=button]{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+
+    .contact_form input,
+    .contact_form select,
+    .contact_form textarea,
+    .contact_form button
+    {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+    .contact_form
+    {
+        max-width: 100%;
+    }
+
+    .contact_form label
+    {
+        text-align: left;
+        margin-left: 20px;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .mySlides img {
+        width: 100% !important;
+    }
+
+    .w3-display-container.mySlides {
+        width: 48% !important;
+    }
+
+}
+
